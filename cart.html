@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#09060a">
+<title>Your Bag — Born to Yearn</title>
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top" data-page="cart">
+<div id="hdr"></div>
+<main class="wrap">
+  <div class="pagehead" style="padding-bottom:30px">
+    <p class="crumbs"><a href="index.html">HOME</a> / <a href="shop.html">SHOP</a> / BAG</p>
+    <p class="eyebrow">YOUR LOADOUT</p><h1>Shopping <em>bag.</em></h1>
+  </div>
+  <div class="cart-layout" style="margin-bottom:70px">
+    <div><div id="cartList"></div><a class="btn btn-ghost" href="shop.html">← Keep browsing</a></div>
+    <aside class="summary glass">
+      <h3>Order summary</h3>
+      <div class="shipbar" id="shipbar"></div>
+      <div class="line"><span>Subtotal</span><b id="sub">—</b></div>
+      <div class="line"><span>Discount</span><b id="disc">—</b></div>
+      <div class="line"><span>Shipping</span><b id="ship">—</b></div>
+      <div class="line total"><span>Total</span><b id="grand">₱0</b></div>
+      <form class="voucher" id="voucherForm"><input id="voucherCode" placeholder="Voucher code" aria-label="Voucher code" autocomplete="off"><button class="btn btn-ghost" type="submit">Apply</button></form>
+      <p class="note" id="vMsg" style="margin:-4px 0 16px"></p>
+      <form id="checkoutForm">
+        <label class="field">Your name<input id="customerName" type="text" maxlength="60" placeholder="Name for the order" required></label>
+        <label class="field">Delivery address<textarea id="address" maxlength="200" placeholder="House no., street, city" required style="min-height:80px"></textarea></label>
+        <div class="form-row"><label class="field">Payment<select id="paymentMethod"><option>GCash</option><option>Credit / debit card</option><option>Bank transfer</option><option>Cash on delivery</option></select></label><label class="field">Order date<input id="orderDate" type="date" required></label></div>
+        <p class="note" style="margin:0 0 14px">Demo checkout only — no payment is collected.</p>
+        <button class="btn btn-primary" id="placeBtn" type="submit" style="width:100%">Place demo order →</button>
+      </form>
+    </aside>
+  </div>
+</main>
+<div id="ftr"></div>
+<script src="catalog.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

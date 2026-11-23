@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#09060a">
+<title>Orders & Tracking — Born to Yearn</title>
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top" data-page="orders">
+<div id="hdr"></div>
+<main class="wrap">
+  <div class="pagehead" style="padding-bottom:30px">
+    <p class="crumbs"><a href="index.html">HOME</a> / ORDERS</p>
+    <p class="eyebrow">TRANSACTION HISTORY</p><h1>Orders &amp; <em>tracking.</em></h1>
+    <p class="sub">Every order placed through the bag appears here and is saved in this browser.</p>
+  </div>
+  <div class="banner hidden" id="banner"></div>
+  <div class="stats4" style="margin-bottom:26px">
+    <div class="glass"><strong id="oNum">0</strong><small>ORDERS</small></div>
+    <div class="glass"><strong id="oItems">0</strong><small>ITEMS SOLD</small></div>
+    <div class="glass"><strong id="oSales">₱0</strong><small>STORE SALES</small></div>
+    <div class="glass"><strong>PHP ₱</strong><small>CURRENCY</small></div>
+  </div>
+  <section class="track glass">
+    <p class="eyebrow">TRACK AN ORDER</p><h2 style="font-size:32px">Where's my <em>gear?</em></h2>
+    <form id="trackForm"><input id="trackId" placeholder="Order ID, e.g. BY-1005" aria-label="Order ID" required><button class="btn btn-primary" type="submit">Track</button></form>
+    <div id="trackResult"></div>
+  </section>
+  <div class="otop"><label class="search"><span>⌕</span><input id="orderSearch" type="search" placeholder="Search by order, customer, item or status…" aria-label="Search orders"></label></div>
+  <div class="panel" style="margin-bottom:70px">
+    <div class="table-scroll"><table><thead><tr><th>ORDER</th><th>CUSTOMER</th><th>ITEMS</th><th>DATE</th><th>PAYMENT</th><th>STATUS</th><th class="r">TOTAL</th></tr></thead><tbody id="ordersTable"></tbody></table></div>
+    <p class="empty hidden" id="emptyOrders">No orders match your search.</p>
+    <div class="panel-foot"><span id="oCount"></span><span>All prices in Philippine pesos ₱</span></div>
+  </div>
+</main>
+<div id="ftr"></div>
+<script src="catalog.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
